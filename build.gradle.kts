@@ -27,6 +27,10 @@ tasks.jar {
     }
 }
 
+tasks.withType<Jar> {
+    archiveFileName.set("myname.jar")
+}
+
 tasks.register<Jar>("fatJar") {
     archiveClassifier.set("all")
     manifest {
